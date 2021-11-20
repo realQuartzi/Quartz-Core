@@ -100,10 +100,12 @@
   <ItemGroup>
     <ClInclude Include="include\quartz\core\window.h" />
     <ClInclude Include="include\quartz\engine.h" />
+    <ClInclude Include="include\quartz\extend\debug.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\core\window.cpp" />
     <ClCompile Include="source\engine.cpp" />
+    <ClCompile Include="source\extend\debug.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

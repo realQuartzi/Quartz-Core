@@ -16,11 +16,13 @@
       <Filter>include\Quartz</Filter>
     </ClInclude>
     <ClInclude Include="include\quartz\core\window.h" />
+    <ClInclude Include="include\quartz\extend\debug.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\engine.cpp">
       <Filter>source</Filter>
     </ClCompile>
     <ClCompile Include="source\core\window.cpp" />
+    <ClCompile Include="source\extend\debug.cpp" />
   </ItemGroup>
 </Project>

@@ -1,5 +1,5 @@
-#include <iostream>
 #include "engine.h"
+#include "extend/debug.h"
 
 #include "SDL2/SDL.h"
 
@@ -38,14 +38,19 @@ namespace Quartz
 
 		if (SDL_Init(SDL_INIT_EVERYTHING) < 0)
 		{
-			std::cout << "Error initializing SDL2: " << SDL_GetError() << std::endl;
+			Debug::LogError( ("Error initializing SDL2: {}", SDL_GetError()) );
+			//std::cout <<  << SDL_GetError() << std::endl;
 		}
 		else
 		{
 			SDL_version version;
 			SDL_VERSION(&version);
 
-			std::cout << "SDL " << (int32_t)version.major << "." << (int32_t)version.minor << "." << (int32_t)version.patch << std::endl;
+			// TODO Fix Logging Issue
+			
+			//Debug::Log(("SDL {}.{}.{}", (int32_t)version.major, (int32_t)version.minor, (int32_t)version.patch);
+
+			//std::cout << "SDL " <<  << std::endl;
 
 			if (window.Create())
 			{
@@ -56,7 +61,8 @@ namespace Quartz
 
 		if (!retrn) 
 		{
-			std::cout << "Engine initialization failed. Shutting down." << std::endl;
+			Debug::LogError("Engine initialization failed. Shutting down.");
+			//std::cout << "Engine initialization failed. Shutting down." << std::endl;
 		}
 
 		return retrn;
@@ -73,23 +79,28 @@ namespace Quartz
 	void Engine::GetInfo() 
 	{
 #ifdef QUARTZ_CONFIG_DEBUG
-		std::cout << "Configuration: DEBUG" << std::endl;
+		Debug::Log("Configuration: DEBUG");
+		//std::cout << "Configuration: DEBUG" << std::endl;
 #endif
 
 #ifdef QUARTZ_CONFIG_RELEASE
-		std::cout << "Configuration: RELEASE" << std::endl;
+		Debug::Log("Configuration: RELEASE");
+		//std::cout << "Configuration: RELEASE" << std::endl;
 #endif
 
 #ifdef QUARTZ_PLATFORM_WINDOWS
-		std::cout << "Platform: WINDOWS" << std::endl;
+		Debug::Log("Platform: WINDOWS");
+		//std::cout << "Platform: WINDOWS" << std::endl;
 #endif
 
 #ifdef QUARTZ_PLATFORM_LINUX
-		std::cout << "Platform: LINUX" << std::endl;
+		Debug::Log("Platform: LINUX");
+		//std::cout << "Platform: LINUX" << std::endl;
 #endif
 
 #ifdef QUARTZ_PLATFORM_MAC
-		std::cout << "Platform: MAC" << std::endl;
+		Debug::Log("Platform: MAC");
+		//std::cout << "Platform: MAC" << std::endl;
 #endif
 	}
 
