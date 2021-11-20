@@ -55,7 +55,7 @@ namespace Quartz::Core
 		glEnable(GL_BLEND);
 		glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
-		glClearColor(255, 0, 0, 255);
+		glClearColor(1, 0, 0, 1);
 
 		return true;
 	}
