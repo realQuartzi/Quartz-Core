@@ -25,6 +25,10 @@ namespace Quartz
 			while (isRunning)
 			{
 				window.BloatEvents();
+
+				window.BeginRender();
+
+				window.EndRender();
 			}
 		}
 		Shutdown();

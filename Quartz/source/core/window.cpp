@@ -48,6 +48,15 @@ namespace Quartz::Core
 
 		gladLoadGLLoader(SDL_GL_GetProcAddress);
 
+		// TODO: Move this to a renderer Init call;
+		glEnable(GL_DEPTH_TEST);
+		glDepthFunc(GL_LEQUAL);
+
+		glEnable(GL_BLEND);
+		glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+
+		glClearColor(255, 0, 0, 255);
+
 		return true;
 	}
 
@@ -71,5 +80,15 @@ namespace Quartz::Core
 				break;
 			}
 		}
+	}
+
+	void Window::BeginRender()
+	{
+		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+	}
+
+	void Window::EndRender()
+	{
+		SDL_GL_SwapWindow(window);
 	}
 }

@@ -17,6 +17,9 @@ namespace Quartz::Core
 
 		void BloatEvents();
 
+		void BeginRender();
+		void EndRender();
+
 	private:
 		SDL_Window* window;
 		SDL_GLContext glContext;
