@@ -2,6 +2,7 @@
 
 
 struct SDL_Window;
+using SDL_GLContext = void*;
 
 namespace Quartz::Core
 {
@@ -18,5 +19,6 @@ namespace Quartz::Core
 
 	private:
 		SDL_Window* window;
+		SDL_GLContext glContext;
 	};
 }
