@@ -56,6 +56,7 @@ namespace Quartz
 			{
 				retrn = true;
 				isRunning = true;
+				isInitialized = true;
 			}
 		}
 
@@ -71,6 +72,8 @@ namespace Quartz
 	void Engine::Shutdown()
 	{
 		isRunning = false;
+		isInitialized = false;
+
 		window.Shutdown();
 		SDL_Quit();
 	}
@@ -107,7 +110,7 @@ namespace Quartz
 	// - -- Singleton -- -
 	Engine* Engine::instance = nullptr;
 
-	Engine::Engine() : isRunning(false)
+	Engine::Engine() : isRunning(false), isInitialized(false)
 	{
 		GetInfo();
 	}

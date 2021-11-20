@@ -14,6 +14,10 @@ odir = "bin-obj/%{cfg.buildcfg}/{prj.name}"
 -- External Dependencies
 externals = {}
 externals["SDL2"] = "external/SDL2"
+externals["Glad"] = "external/Glad"
+
+-- Process Glad before Any
+include "external/Glad"
 
 project "Quartz"
     location "Quartz"
@@ -35,12 +39,18 @@ project "Quartz"
     sysincludedirs
     {
         "%{prj.name}/include/quartz",
-        "%{externals.SDL2}/include"
+        "%{externals.SDL2}/include",
+        "%{externals.Glad}/include"
     }
 
     flags
     {
         "FatalWarnings"
+    }
+
+    defines
+    {
+        "GLFW_INCLUDE_NONE" -- Makes sure Glad does not include GLFW
     }
 
     filter {"system:windows", "configurations:*"}
@@ -129,7 +139,8 @@ project "QuartzEditor"
 
         links
         {
-            "SDL2"
+            "SDL2",
+            "Glad"
         }
 
     filter {"system:macosx", "configurations:*"}
@@ -144,10 +155,22 @@ project "QuartzEditor"
             "QUARTZ_PLATFORM_MAC"
         }
 
+        links
+        {
+            "SDL2.framework",
+            "Glad"
+        }
+
     filter {"system:linux", "configurations:*"}
         defines
         {
             "QUARTZ_PLATFORM_LINUX"
+        }
+
+        links
+        {
+            "SDL2",
+            "Glad"
         }
 
     filter {"configurations:Debug"}

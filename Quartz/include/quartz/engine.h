@@ -23,6 +23,7 @@ namespace Quartz
 
 	private:
 		bool isRunning;
+		bool isInitialized;
 
 		Core::Window window;
 

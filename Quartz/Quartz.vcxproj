@@ -44,21 +44,21 @@
     <IntDir>..\bin-obj\Debug\{prj.name}\Debug\Quartz\</IntDir>
     <TargetName>Quartz</TargetName>
     <TargetExt>.lib</TargetExt>
-    <IncludePath>include\Quartz;..\external\SDL2\include;$(IncludePath)</IncludePath>
+    <IncludePath>include\quartz;..\external\SDL2\include;..\external\Glad\include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <OutDir>..\bin\Release\Quartz\</OutDir>
     <IntDir>..\bin-obj\Release\{prj.name}\Release\Quartz\</IntDir>
     <TargetName>Quartz</TargetName>
     <TargetExt>.lib</TargetExt>
-    <IncludePath>include\Quartz;..\external\SDL2\include;$(IncludePath)</IncludePath>
+    <IncludePath>include\quartz;..\external\SDL2\include;..\external\Glad\include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <TreatWarningAsError>true</TreatWarningAsError>
-      <PreprocessorDefinitions>QUARTZ_PLATFORM_WINDOWS;QUARTZ_CONFIG_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>GLFW_INCLUDE_NONE;QUARTZ_PLATFORM_WINDOWS;QUARTZ_CONFIG_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
@@ -77,7 +77,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <TreatWarningAsError>true</TreatWarningAsError>
-      <PreprocessorDefinitions>QUARTZ_PLATFORM_WINDOWS;QUARTZ_CONFIG_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>GLFW_INCLUDE_NONE;QUARTZ_PLATFORM_WINDOWS;QUARTZ_CONFIG_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <DebugInformationFormat>None</DebugInformationFormat>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>

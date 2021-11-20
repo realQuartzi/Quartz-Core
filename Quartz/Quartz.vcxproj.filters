@@ -4,25 +4,45 @@
     <Filter Include="include">
       <UniqueIdentifier>{89AF369E-F58E-B539-FEA6-40106A051C9B}</UniqueIdentifier>
     </Filter>
-    <Filter Include="include\Quartz">
-      <UniqueIdentifier>{DF15961C-CBE3-8922-B477-FA48A0E46587}</UniqueIdentifier>
+    <Filter Include="include\quartz">
+      <UniqueIdentifier>{FF293B67-EBF7-2E6D-D48B-9F93C0F80AD2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\quartz\core">
+      <UniqueIdentifier>{D7F1FA1D-4353-D82B-CCC0-1EDE38210FEB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\quartz\extend">
+      <UniqueIdentifier>{B618CD8D-2285-8888-EB78-20E657A4AAF0}</UniqueIdentifier>
     </Filter>
     <Filter Include="source">
       <UniqueIdentifier>{76FF3A1C-62A1-65F2-4B5C-7946379DEC42}</UniqueIdentifier>
     </Filter>
+    <Filter Include="source\core">
+      <UniqueIdentifier>{AEC9BDBA-1A7F-36B0-A373-30870F282DB4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\extend">
+      <UniqueIdentifier>{4D42A566-B902-219D-823D-6A1AEEBC6579}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\quartz\engine.h">
-      <Filter>include\Quartz</Filter>
+    <ClInclude Include="include\quartz\core\window.h">
+      <Filter>include\quartz\core</Filter>
     </ClInclude>
-    <ClInclude Include="include\quartz\core\window.h" />
-    <ClInclude Include="include\quartz\extend\debug.h" />
+    <ClInclude Include="include\quartz\engine.h">
+      <Filter>include\quartz</Filter>
+    </ClInclude>
+    <ClInclude Include="include\quartz\extend\debug.h">
+      <Filter>include\quartz\extend</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="source\core\window.cpp">
+      <Filter>source\core</Filter>
+    </ClCompile>
     <ClCompile Include="source\engine.cpp">
       <Filter>source</Filter>
     </ClCompile>
-    <ClCompile Include="source\core\window.cpp" />
-    <ClCompile Include="source\extend\debug.cpp" />
+    <ClCompile Include="source\extend\debug.cpp">
+      <Filter>source\extend</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
