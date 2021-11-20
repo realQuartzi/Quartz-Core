@@ -36,8 +36,6 @@ namespace Debug
 
 		// Log Text
 		std::cout << "[Log] " << text << std::endl;
-
-		
 	}
 
 	void LogWarning(std::string text)
@@ -68,7 +66,7 @@ namespace Debug
 		std::cout << "[" << hours << ":" << minutes << ":" << seconds << "] ";
 
 		//Log Warning
-		std::cout << "[Warning] " << text << std::endl;
+		std::cout << "\033[1;33m[Warning] " << text << "\033[0m" << std::endl;
 	}
 
 	void LogError(std::string text)
@@ -99,7 +97,7 @@ namespace Debug
 		std::cout << "[" << hours << ":" << minutes << ":" << seconds << "] ";
 
 		//Log Error
-		std::cout << "[ERROR] " << text << std::endl;
+		std::cout << "\033[31m[ERROR] " << text << "\033[0m" << std::endl;
 	}
 
 #else

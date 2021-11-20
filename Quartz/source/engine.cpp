@@ -85,6 +85,9 @@ namespace Quartz
 	//Get Information about current build
 	void Engine::GetInfo() 
 	{
+		Debug::LogWarning("Warning Test");
+		Debug::LogError("Error Test");
+
 #ifdef QUARTZ_CONFIG_DEBUG
 		Debug::Log("Configuration: DEBUG");
 		//std::cout << "Configuration: DEBUG" << std::endl;

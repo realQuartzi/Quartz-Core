@@ -17,7 +17,7 @@ namespace Quartz::Graphics
 		glBufferData(GL_ARRAY_BUFFER, vCount * dim * sizeof(float), vArray, GL_STATIC_DRAW);
 
 		glEnableVertexAttribArray(0);
-		glVertexAttribPointer(0, dim, GL_FLOAT, GL_FALSE, 0, 0);
+		glVertexAttribPointer(0, (GLint)dim, GL_FLOAT, GL_FALSE, 0, 0);
 		glDisableVertexAttribArray(0);
 		glBindBuffer(GL_ARRAY_BUFFER, 0);
 

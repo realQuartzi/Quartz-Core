@@ -1,7 +1,6 @@
 #include "graphics/shader.h"
 #include "extend/debug.h"
 
-
 #include "glad/glad.h"
 
 namespace Quartz::Graphics

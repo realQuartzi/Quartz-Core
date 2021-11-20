@@ -14,7 +14,7 @@ namespace Quartz::Graphics
 		void Unbind();
 
 	private:
-		uint32_t vertexCount;
+		uint64_t vertexCount;
 		uint32_t vao;
 		uint32_t positionVbo;
 	};
